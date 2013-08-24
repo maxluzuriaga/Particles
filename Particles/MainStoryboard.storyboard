@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nen-BR-vfy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--Particles View Controller-->
+        <scene sceneID="3kL-d3-dtC">
+            <objects>
+                <viewController id="nen-BR-vfy" customClass="ParticlesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WoM-Vi-JIS"/>
+                        <viewControllerLayoutGuide type="bottom" id="YF1-vn-xyL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="puh-zy-bDV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34z-3Z-AlC" customClass="ParticlesView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elx-We-R4Y" userLabel="ControlsView">
+                                <rect key="frame" x="-1" y="484" width="322" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-ac-qnj">
+                                        <rect key="frame" x="1" y="9" width="320" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="edY-nq-nBl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-vy-vPX">
+                                        <rect key="frame" x="18" y="43" width="286" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="KOw-Ta-FiW"/>
+                                        </constraints>
+                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.49087126358695654" green="0.49087126358695654" blue="0.49087126358695654" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="velocityChanged:" destination="nen-BR-vfy" eventType="valueChanged" id="bHb-UY-gJu"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PvW-vy-vPX" firstAttribute="leading" secondItem="Elx-We-R4Y" secondAttribute="leading" constant="20" id="1A6-aV-5FB"/>
+                                    <constraint firstItem="mOz-ac-qnj" firstAttribute="top" secondItem="Elx-We-R4Y" secondAttribute="top" constant="9" id="5Xq-GP-QaL"/>
+                                    <constraint firstItem="mOz-ac-qnj" firstAttribute="leading" secondItem="Elx-We-R4Y" secondAttribute="leading" constant="1" id="AeP-Yr-ChZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="PvW-vy-vPX" secondAttribute="bottom" constant="9" id="Cap-g9-aje"/>
+                                    <constraint firstAttribute="height" constant="85" id="Pee-eE-six"/>
+                                    <constraint firstAttribute="trailing" secondItem="mOz-ac-qnj" secondAttribute="trailing" constant="1" id="qQc-XU-Hii"/>
+                                    <constraint firstAttribute="trailing" secondItem="PvW-vy-vPX" secondAttribute="trailing" constant="20" id="zgf-dz-aV8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Elx-We-R4Y" secondAttribute="trailing" constant="-1" id="6Ns-aG-NKY"/>
+                            <constraint firstAttribute="bottom" secondItem="Elx-We-R4Y" secondAttribute="bottom" constant="-1" id="9Kg-K5-UcP"/>
+                            <constraint firstAttribute="trailing" secondItem="34z-3Z-AlC" secondAttribute="trailing" id="FR5-yc-mK2"/>
+                            <constraint firstAttribute="bottom" secondItem="34z-3Z-AlC" secondAttribute="bottom" id="PlP-Py-yln"/>
+                            <constraint firstItem="34z-3Z-AlC" firstAttribute="leading" secondItem="puh-zy-bDV" secondAttribute="leading" id="l3T-Mv-WF3"/>
+                            <constraint firstItem="34z-3Z-AlC" firstAttribute="top" secondItem="puh-zy-bDV" secondAttribute="top" id="mON-NB-LyX"/>
+                            <constraint firstItem="Elx-We-R4Y" firstAttribute="leading" secondItem="puh-zy-bDV" secondAttribute="leading" constant="-1" id="sd7-nV-6Xi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controlsView" destination="Elx-We-R4Y" id="sB5-fD-Eg8"/>
+                        <outlet property="particlesView" destination="34z-3Z-AlC" id="eW9-U1-ut5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyJ-Hw-fzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="107"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
